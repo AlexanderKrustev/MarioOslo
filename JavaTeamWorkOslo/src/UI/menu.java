@@ -9,6 +9,7 @@ public class menu {
     public static Rectangle playButton = new Rectangle(10, 50, 100, 37);
     public static Rectangle helpButton = new Rectangle(10, 102, 100, 37);
     public static Rectangle quitButton = new Rectangle(10, 154, 100, 37);
+    public static Rectangle customizeButton = new Rectangle(10, 206, 100, 37);
 
     public static void render(Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
@@ -22,14 +23,15 @@ public class menu {
 
         g.setFont(fnt1);
         g.drawString("Play", playButton.x + 19, playButton.y + 29);
-        ((Graphics2D) g).setBackground(Color.RED);
         g2d.draw(playButton);
         g.drawString("Help", helpButton.x + 19, helpButton.y + 29);
         g2d.draw(helpButton);
         g.drawString("Quit", quitButton.x + 19, quitButton.y + 29);
         g2d.draw(quitButton);
+        g.drawString("Customize", customizeButton.x + 19, customizeButton.y + 29);
+        g2d.draw(customizeButton);
 
         g.setFont(fnt2);
-        g.drawString("Version 0.0.2",500,380);
+        g.drawString("Version 0.0.1",500,380);
     }
 }

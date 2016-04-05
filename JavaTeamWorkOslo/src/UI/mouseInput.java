@@ -8,18 +8,21 @@ import java.awt.event.MouseListener;
  */
 public class mouseInput implements MouseListener{
     public void mousePressed(MouseEvent e) {
-        int mx = e.getX();
-        int my = e.getY();
+        int mouseX = e.getX();
+        int mouseY = e.getY();
 
-        if(mx>=10 && mx<=110) {
-            if(my>=50 && my<=87) {
+        if(mouseX>=10 && mouseX<=110) {
+            if(mouseY>=50 && mouseY<=87) {
                 gameBoard.State = gameBoard.STATE.GAME;
             }
-            if(my>=102 && my<=139) {
+            if(mouseY>=102 && mouseY<=139) {
                 //HELP
             }
-            if(my>=154 && my<=191) {
-                System.exit(1);
+            if(mouseY>=154 && mouseY<=191) {
+                System.exit(1); //exit
+            }
+            if(mouseY>=206 && mouseY<=258) {
+                gameBoard.State = gameBoard.STATE.GAME;
             }
         }
     }

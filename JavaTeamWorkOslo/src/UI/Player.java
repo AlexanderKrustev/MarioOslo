@@ -7,6 +7,7 @@ import java.awt.event.KeyEvent;
 /**
  * Created by krustev on 31-Mar-16.
  */
+
 public class Player {
     int x, dx, y, nx, nx2, distanceTraveled;                                                     //x coordinate,change in x coordinate,y coordinate,1st rep bg,2nd rep bg,dist traveled
     Image player;                                                                                //The player variable
@@ -67,7 +68,12 @@ public class Player {
         if(key == KeyEvent.VK_LEFT) {                                                        //If the key sent was LEFT
             player = playerFacingLeft.getImage();                                            //Make the player face leftwards
             if(distanceTraveled<104){
-                dx=-3;
+                if(x==85 && y==285){
+
+                }
+                else {
+                    dx = -3;
+                }
             }
             else{
                 dx=-2;
@@ -76,11 +82,19 @@ public class Player {
 
         if(key == KeyEvent.VK_RIGHT) {                                                       //If the key sent was RIGHT
             player = playerFacingRight.getImage();                                           //Make the player face rightwards
-            if(distanceTraveled<104){
-                dx=3;
+            if(distanceTraveled<104) {
+                if(x==85 && y==285){
+
+                }
+                else {
+                    dx = 3;
+                }
             }else{
                 dx=2;
             }
+        }
+        if(key == KeyEvent.VK_SPACE) {                                                       //If the key sent was RIGHT
+            y=255;
         }
     }
 
@@ -88,6 +102,9 @@ public class Player {
         int key = e.getKeyCode();                                                           //The key originally sent from the board class
 
         if(key == KeyEvent.VK_LEFT || key == KeyEvent.VK_RIGHT)                              //If the left or right key was released
-            dx = 0;                                                                          //Stop moving
+            dx = 0;
+        if(key==KeyEvent.VK_SPACE){
+            y=285;
+        }
     }
 }
