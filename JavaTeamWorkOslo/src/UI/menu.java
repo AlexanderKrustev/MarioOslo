@@ -9,7 +9,7 @@ public class menu {
     public static Rectangle playButton = new Rectangle(10, 50, 100, 37);
     public static Rectangle helpButton = new Rectangle(10, 102, 100, 37);
     public static Rectangle quitButton = new Rectangle(10, 154, 100, 37);
-    public static Rectangle customizeButton = new Rectangle(10, 206, 100, 37);
+    public static Rectangle customizeButton = new Rectangle(10, 206, 180, 37);
 
     public static void render(Graphics g) {
         Graphics2D g2d = (Graphics2D) g;

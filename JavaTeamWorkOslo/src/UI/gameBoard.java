@@ -33,7 +33,7 @@ public class gameBoard extends JPanel implements ActionListener {
         setFocusable(true);                                                                                                                  //Allows movement
         ImageIcon worldBackgroundIcon = new ImageIcon("Menu.jpg");                  //Image for menu
         menuBackgroundIcon = worldBackgroundIcon.getImage();
-        worldBackgroundIcon = new ImageIcon("World.png");  //Image for background
+        worldBackgroundIcon = new ImageIcon("World.jpg");  //Image for background
         background = worldBackgroundIcon.getImage();                                                           //Give the background the image
         time = new Timer(20,this);                                                           //Timer set to update "this" class every 20 milliseconds(Approximately 50fps)
         time.start();                                                                        //Actually start the timer
@@ -49,20 +49,20 @@ public class gameBoard extends JPanel implements ActionListener {
             super.paintComponent(g);
             Graphics2D g2d = (Graphics2D) g;                                             //casts 2d graphics(or however you would explain it)
 
-            g2d.drawImage(background, -player.nx, 0, null);                                   //Draw the background image
-            g2d.drawImage(background, -player.nx2, 0, null);                                  //Draw the background image
+            g2d.drawImage(background, -player.firstRepBackground, 0, null);                                   //Draw the background image
+            g2d.drawImage(background, -player.sexondRepBackground, 0, null);                                  //Draw the background image
 
-            if(-player.nx<-575)  {                                                            //If going forwards
-               player.nx=-575;
+            if(-player.firstRepBackground <-4500)  {                                                            //If going forwards
+               player.firstRepBackground =-4500;
             }                                                                                    //Start placing forwards every 575px in front on the last one
-            else if(-player.nx>575)
+            else if(-player.firstRepBackground >4500)
                                                                                               //If going backwards
-                player.nx=575;                                                               //Start placing backwards every 575px behind the last one
+                player.firstRepBackground =4500;                                                               //Start placing backwards every 575px behind the last one
 
-            if(-player.nx2<-575)                                                             //If going forwards
-                player.nx2=-575;                                                             //Start placing forwards every 575px in front on the last one
-            else if(-player.nx2>575)                                                         //If going backwards
-                player.nx2=575;                                                              //Start placing backgrounds every 575px behind the last one
+            if(-player.sexondRepBackground <-4500)                                                             //If going forwards
+                player.sexondRepBackground =-4500;                                                             //Start placing forwards every 575px in front on the last one
+            else if(-player.sexondRepBackground >4500)                                                         //If going backwards
+                player.sexondRepBackground =4500;                                                              //Start placing backgrounds every 575px behind the last one
 
             g2d.drawImage(player.getImage(), player.getX(), player.getY(), null);                      //Draw the player at the position he is currently(Coordinate values taken from player class)
         } else {
