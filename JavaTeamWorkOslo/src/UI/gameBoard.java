@@ -43,7 +43,7 @@ public class gameBoard extends JPanel implements ActionListener {
         this.HighScore.setVisible(false);
         ImageIcon worldBackgroundIcon = new ImageIcon("Menu.jpg");                  //Image for Menu
         menuBackgroundIcon = worldBackgroundIcon.getImage();
-        worldBackgroundIcon = new ImageIcon("World.jpg");  //Image for background
+        worldBackgroundIcon = new ImageIcon("world5.png");  //Image for background
         background = worldBackgroundIcon.getImage();                                                           //Give the background the image
         time = new Timer(20,this);                                                           //Timer set to update "this" class every 20 milliseconds(Approximately 50fps)
         time.start();
