@@ -6,14 +6,16 @@ import java.awt.event.MouseListener;
 /**
  * Created by krustev on 31-Mar-16.
  */
+
 public class mouseInput implements MouseListener{
+
     public void mousePressed(MouseEvent e) {
         int mouseX = e.getX();
         int mouseY = e.getY();
 
         if(mouseX>=10 && mouseX<=110) {
             if(mouseY>=50 && mouseY<=87) {
-                gameBoard.State = gameBoard.STATE.GAME;
+                GameBoard.State = GameBoard.STATE.GAME;
             }
             if(mouseY>=102 && mouseY<=139) {
                 //HELP
@@ -22,7 +24,7 @@ public class mouseInput implements MouseListener{
                 System.exit(1); //exit
             }
             if(mouseY>=206 && mouseY<=258) {
-                gameBoard.State = gameBoard.STATE.GAME;
+                GameBoard.State = GameBoard.STATE.GAME;
             }
         }
     }
