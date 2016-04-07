@@ -1,5 +1,8 @@
 package UI;
 
+import Models.*;
+import Models.Player;
+
 import javax.swing.*;
 
 /**
@@ -9,7 +12,7 @@ public class run {
     public static void main(String[] args)  {
         JFrame frame = new JFrame("Oslo Mario v0.0.1 ");                     //Create JFrame called frame
 
-        frame.getContentPane().add(new gameBoard());                       //Go to board class
+        frame.getContentPane().add(new gameBoard(new Player()));                       //Go to board class
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);                                //Make frame close on X click
         frame.setSize(600,413);                                                              //Set the frame size to the size of the background
         frame.setResizable(false);                                                           //Make sure the user can't resize the frame

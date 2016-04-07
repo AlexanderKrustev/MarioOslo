@@ -12,7 +12,7 @@ import java.awt.event.KeyEvent;
 /**
  * Created by krustev on 31-Mar-16.
  */
-public class GameBoard extends JPanel implements ActionListener {
+public class gameBoard extends JPanel implements ActionListener {
 
                                                                                   //Instance of player class
     Image background, menuBackgroundIcon;                                                                //The background images
@@ -29,7 +29,7 @@ public class GameBoard extends JPanel implements ActionListener {
 
     public static STATE State = STATE.MENU;
 
-    public GameBoard(Player player) {
+    public gameBoard(Player player) {
 
 
         this.addMouseListener(new mouseInput());
@@ -81,7 +81,7 @@ public class GameBoard extends JPanel implements ActionListener {
             g2d.drawImage(player.getImage(), player.getX(), player.getY(), null);                      //Draw the player at the position he is currently(Coordinate values taken from player class)
         } else {
             g.drawImage(menuBackgroundIcon, 1, 1, null);
-            Menu.render(g);
+            menu.render(g);
         }
     }
 

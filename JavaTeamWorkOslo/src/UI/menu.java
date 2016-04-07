@@ -5,7 +5,7 @@ import java.awt.*;
 /**
  * Created by krustev on 31-Mar-16.
  */
-public class Menu {
+public class menu {
 
     public static Rectangle playButton = new Rectangle(10, 50, 100, 37);
     public static Rectangle helpButton = new Rectangle(10, 102, 100, 37);

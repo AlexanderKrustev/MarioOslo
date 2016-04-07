@@ -9,10 +9,10 @@ import javax.swing.*;
 public class Display extends JFrame {
     public static String version="Oslo Mario v0.0.1";
     public JFrame gameFrame;
-    public Menu menu;
+    public menu menu;
 
 
-    public Display(GameBoard Board){
+    public Display(gameBoard Board){
 
         this.gameFrame = new JFrame(version);                                                           //Create JFrame called frame
         this.gameFrame.getContentPane().add(Board);                                           //Go to board class
@@ -22,7 +22,7 @@ public class Display extends JFrame {
         this.gameFrame.setLocation(20, 50);                                                         //Place the frame in a nicer positio
         this.gameFrame.setVisible(true);
         this.gameFrame.setLocationRelativeTo(null);
-        this.menu = new Menu();
+        this.menu = new menu();
                                                                                                 //Make the frame visible
 
       //  int frameWidth = gameFrame.getContentPane().getWidth();

@@ -15,7 +15,7 @@ public class mouseInput implements MouseListener{
 
         if(mouseX>=10 && mouseX<=110) {
             if(mouseY>=50 && mouseY<=87) {
-                GameBoard.State = GameBoard.STATE.GAME;
+                gameBoard.State = gameBoard.STATE.GAME;
             }
             if(mouseY>=102 && mouseY<=139) {
                 //HELP
@@ -24,7 +24,7 @@ public class mouseInput implements MouseListener{
                 System.exit(1); //exit
             }
             if(mouseY>=206 && mouseY<=258) {
-                GameBoard.State = GameBoard.STATE.GAME;
+                gameBoard.State = gameBoard.STATE.GAME;
             }
         }
     }
